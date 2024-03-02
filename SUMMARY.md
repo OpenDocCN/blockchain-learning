@@ -3,6 +3,7 @@
 +   [基于区块链技术实现的学历信息征信系统](docs/bc-xueli-zhengxin/README.md)
 +   [EOS DApp 合约开发之 DICE 游戏(线上完整项目)](docs/eos-dapp-cntr-dev/README.md)
 +   [基于 EOS/Node.js 的 DApp 工程项目实战---去中心化交易所](docs/eos-node-dapp-proj/README.md)
++   [EOS 钱包实战开发](docs/eos-wlt-dev/README.md)
 +   [etcd](docs/etcd/README.md)
 +   [精读以太坊源码](docs/eth-src/README.md)
 +   [从零到壹构建基于 Fabric-SDK-Go 的 Web 应用](docs/fbrc-go-web-0to1/README.md)
