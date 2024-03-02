@@ -4,7 +4,7 @@
 
 在项目根目录下创建 script 目录，用于存放脚本文件
 
-```go
+```js
 $ cd $HOME/kevin-marbles
 $ mkdir scripts && cd scripts 
 ```
@@ -13,13 +13,13 @@ $ mkdir scripts && cd scripts
 
 创建 install_chaincode.js 文件并编辑
 
-```go
+```js
 $ vim install_chaincode.js 
 ```
 
 install_chaincode.js 文件完整内容如下
 
-```go
+```js
 // ============================================================================================================================
 //     Install Chaincode
 // This file shows how to install chaincode onto a Hyperledger Fabric Peer via the SDK + FC Wrangler
@@ -91,13 +91,13 @@ fcw.enrollWithAdminCert(cp.makeEnrollmentOptionsUsingCert(), function (enrollErr
 
 在当前的 script 目录中创建 instantiate_chaincode.js 文件并编辑
 
-```go
+```js
 $ vim instantiate_chaincode.js 
 ```
 
 instantiate_chaincode.js 文件完整内容如下
 
-```go
+```js
 // ============================================================================================================================
 //     Instantiate Chaincode
 // This file shows how to instantiate chaincode onto a Hyperledger Fabric Channel via the SDK + FC Wrangler
@@ -171,13 +171,13 @@ fcw.enrollWithAdminCert(cp.makeEnrollmentOptionsUsingCert(), function (enrollErr
 
 创建 upgrade_chaincode.js 文件并编辑
 
-```go
+```js
 $ vim upgrade_chaincode.js 
 ```
 
 完整内容如下
 
-```go
+```js
 var winston = require('winston');        //logger module
 var path = require('path');
 var logger = new (winston.Logger)({

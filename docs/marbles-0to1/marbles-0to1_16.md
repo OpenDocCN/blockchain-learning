@@ -6,19 +6,19 @@
 
 打开命令提示符/终端并导航到 marbles 目录。
 
-```go
+```js
 $ cd $HOME/kevin-marbles 
 ```
 
 打开 package.json 文件并编辑
 
-```go
+```js
 $ vim package.json 
 ```
 
 在文件中添加 marbles 项目的依赖 pug，及 gulp，如下所示：
 
-```go
+```js
 [......]
     "dependencies"
         "pug": "2.0.3",
@@ -38,7 +38,7 @@ $ vim package.json
 
 配置指定之后，使用 npm 命令安装指定依赖：
 
-```go
+```js
 $ npm install gulp -g
 $ npm install 
 ```
@@ -47,7 +47,7 @@ $ npm install
 
 Sass 是一个将脚本解析成 CSS 的脚本语言，扩展了 CSS3，增加了规则、变量、混入、选择器、继承等等特性。Sass 生成良好格式化的 CSS 代码，易于组织和维护。学习地址请[点击此处](https://www.sass.hk/)
 
-```go
+```js
 $ mkdir scss 
 ```
 
@@ -67,7 +67,7 @@ Pug 学习，请 [点击此处](https://pugjs.org/api/getting-started.html)
 
 创建 views 目录
 
-```go
+```js
 $ mkdr views 
 ```
 
@@ -81,19 +81,19 @@ public 目录用于存放 CSS、图片及客户端脚本相关的文件，详细
 
 为了能让用户成功访问页面，需要创建一个路由，我们将代码封装在一个名为 site_router.js 的脚本文件中，并保存在 routes 的目录中，所以首先创建 routes 目录
 
-```go
+```js
 $ mkdir routes && cd routes 
 ```
 
 在 routes 目录中创建一个名为 site_router.js 的文件并编辑
 
-```go
+```js
 $ vim site_router.js 
 ```
 
 文件完整内容如下：
 
-```go
+```js
 'use strict';
 /* global process */
 /*******************************************************************************

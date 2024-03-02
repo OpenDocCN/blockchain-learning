@@ -14,7 +14,7 @@
 
 我们将创建的钱包文件储存到了 static/wallet_file 文件夹中，那么遍历该文件夹并判断子文件的名称是否以钱包文件的“.dat”结尾即可获取到我的钱包，然后再截掉后缀就是钱包名称，实现如下。
 
-```go
+```js
 let myUtils = require("../utils/myUtils")
 
 let wallets = []
@@ -37,7 +37,7 @@ stringWithSubstrEnd()方法在 myUtils 包中实现了判断字符串是否以�
 
 创建新钱包的时候我们采用的是调用 seedFromRandomWithMnemonic()方法通过随机助记词生成种子去创建的，那么我们在创建钱包的时候指定助记词即可实现通过助记词导入钱包，这就需要使用到另外一个方法 seedFromMnemonic()，它的 API 定义如下：
 
-```go
+```js
 API.seedFromMnemonic(BIP39, opts, opts.network, opts.passphrase, opts.account, opts.derivationStrategy)
 Seed from Mnemonics (language autodetected) Can throw an error if mnemonic is invalid
 
@@ -72,7 +72,7 @@ opts.derivationStrategy: String, default 'BIP44'
 
 因此通过助记词导入钱包的代码实现如下：
 
-```go
+```js
 let mnemonic = "eternal list thank chaos trick paper sniff ridge make govern invest abandon"
 let walletname = "importWallet1"
 let password = "lixu1234qwer"
@@ -107,7 +107,7 @@ client.createWallet(walletname, config.copayerName, 1, 1, {
 
 既然能通过导入助记词恢复钱包，那也能导出钱包助记词，这个数据在上一章中我们创建钱包后已经能够获取到助记词字断了，但是它需要解锁后才能获取，即通过 import()方法解锁。
 
-```go
+```js
 let walletname = "wallet1"
 let filePath = path.join(config.walletFilePath, walletname + ".dat")
 client.import(fs.readFileSync(filePath));
@@ -126,7 +126,7 @@ console.log("mnemonic:", client.credentials.mnemonic)
 
 编辑 controllers 文件夹下的 wallet.js 文件，实现获取钱包列表、通过助记词导入钱包、导出钱包助记词功能。
 
-```go
+```js
 ......
 
 module.exports = {
@@ -192,7 +192,7 @@ module.exports = {
 
 在 controllers 文件夹下新建 web.js 文件，后端实现返回每个前端页面。
 
-```go
+```js
 module.exports = {
 
     getWalletHtml: (req, res) => {
@@ -205,7 +205,7 @@ module.exports = {
 
 将获取钱包列表、通过助记词导入钱包、导出钱包助记词功能的接口绑定到路由。
 
-```go
+```js
 let router = require('express').Router();
 
 let walletController = require("../controllers/wallet")
@@ -228,7 +228,7 @@ module.exports = router
 
 在文档加载完成后处理获取钱包列表、通过助记词导入钱包、导出钱包助记词等的网络请求。
 
-```go
+```js
 //导出助记词
 function exportMnemonic(walletName) {
     console.log(walletName)
@@ -327,7 +327,7 @@ $(document).ready(function () {
 
 前端显示的钱包列表页面。
 
-```go
+```js
 <html>
 
 <head>

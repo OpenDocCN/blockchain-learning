@@ -4,7 +4,7 @@
 
 返回 utils 目录下
 
-```go
+```js
 $ cd $HOME/kevin-marbles/utils 
 ```
 
@@ -12,13 +12,13 @@ $ cd $HOME/kevin-marbles/utils
 
 检查区块可靠性文件是否正确，创建唯一 ID 串
 
-```go
+```js
 $ vim misc.js 
 ```
 
 misc.js 文件完整内容如下：
 
-```go
+```js
 var fs = require('fs');
 var path = require('path');
 
@@ -130,14 +130,14 @@ module.exports = function (logger) {
 
 连接概要库中的各个文件对相关功能进行了封装，我们需要一个入口点来对各个文件进行解析，如：获取网络名称、获取通道、加载证书等功能。因此，在 utils/connection_profile_lib 目录下创建一个 index.js 文件并编辑
 
-```go
+```js
 $ cd $HOME/kevin-marbles/utils/connection_profile_lib 
 $ vim index.js 
 ```
 
 index.js 文件完整内容如下
 
-```go
+```js
 // ============================================================================================================================
 //     Connection Profile Parsing Library
 //

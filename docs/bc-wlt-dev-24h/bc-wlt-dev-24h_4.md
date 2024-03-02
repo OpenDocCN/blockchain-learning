@@ -54,14 +54,14 @@
 
 新建项目跟文件夹 BTCWallet，然后按照如下步骤执行
 
-```go
+```js
 lixu@ubuntu:~$ cd '/home/lixu/Desktop/demo/BTCWallet/' 
 lixu@ubuntu:~/Desktop/demo/BTCWallet$ npm init 
 ```
 
 然后不断回车初始化项目。然后后自动生成`package.json`文件，是项目包的配置文件，下面我们引入项目中需要用到的库，拷贝下面 json 到`package.json`文件的最后一个字段。
 
-```go
+```js
 ,
   "dependencies": {
     "bitcore-wallet-client": "⁶.7.5",
@@ -76,7 +76,7 @@ lixu@ubuntu:~/Desktop/demo/BTCWallet$ npm init
 
 然后运行以下命令按照上面的依赖库。
 
-```go
+```js
 npm install 
 ```
 
@@ -92,7 +92,7 @@ npm install
 
 项目的入口文件。首先实例化 express 对象，然后将 express.urlencoded、ejs、views、static 路由注册到中间件，服务绑定到 3000 端口。
 
-```go
+```js
 var express = require('express');
 var app = express();
 let router = require("./router/router")
@@ -113,7 +113,7 @@ app.listen(3000)
 
 项目的配置文件。
 
-```go
+```js
 var path = require('path');
 
 module.exports = {
@@ -141,7 +141,7 @@ module.exports = {
 
 出来 wallet 的 model 文件，这里只有一个方法，实例化 bitcore-wallet 客户端。
 
-```go
+```js
 let config = require("../config/config")
 
 module.exports = {
@@ -162,7 +162,7 @@ module.exports = {
 
 路由文件。
 
-```go
+```js
 let router = require('express').Router();
 
 router.get("/wallet.html", (req, res) => {
@@ -176,7 +176,7 @@ module.exports = router
 
 项目工具类，提供返回给前端成功与失败的基本数据结构、判断字符串是否以某个字符串结尾。
 
-```go
+```js
 module.exports = {
 
     success: (data) => {
@@ -213,7 +213,7 @@ module.exports = {
 
 前端处理钱包模块的 js 文件。
 
-```go
+```js
 $(document).ready(function () {
     alert("Welcome to KongYiXueYuan!")
 }) 
@@ -223,7 +223,7 @@ $(document).ready(function () {
 
 前端唯一的 css 文件。
 
-```go
+```js
 #main{
     /*background-color: #8bc34a;*/
     margin: 120px 50px 50px 50px;
@@ -306,7 +306,7 @@ button{
 
 前端：钱包列表的初始页面。
 
-```go
+```js
 <html>
 
 <head>
@@ -332,7 +332,7 @@ button{
 
 前端的导航栏，使用 ejs 库的方法`<%include block/nav.html%>`载入。
 
-```go
+```js
 <div id="nav">
     <div id="nav-center">
         <ul>
@@ -354,7 +354,7 @@ static/js/lib 下的文件请到 github 中下载。
 
 使用如下命令运行项目
 
-```go
+```js
 node index.js 
 ```
 

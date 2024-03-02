@@ -21,7 +21,7 @@
 
 #### 安装 vim、git
 
-```go
+```js
 $ sudo apt install vim
 $ sudo apt install git
 ```
@@ -30,14 +30,14 @@ $ sudo apt install git
 
 **需要 Docker 版本 17.03.0-ce 或更高版本。**
 
-```go
+```js
 $ docker version 
 $ sudo apt install docker.io
 ```
 
 安装完成后执行版本查询命令
 
-```go
+```js
 $ sudo docker version
 ```
 
@@ -49,14 +49,14 @@ $ sudo docker version
 
 我们目前无法一次性轻松管理多个容器。 为了解决这个问题，需要**docker-compose** 。
 
-```go
+```js
 $ docker-compose version 
 $ sudo apt install docker-compose
 ```
 
 安装完成后查询：
 
-```go
+```js
 $ docker-compose version 
 ```
 
@@ -64,7 +64,7 @@ $ docker-compose version
 
 将当前用户添加到 docker 组
 
-```go
+```js
 $ sudo usermod -aG docker kevin
 ```
 
@@ -74,7 +74,7 @@ $ sudo usermod -aG docker kevin
 
 **需要版本 1.10.x 或更高。**如果您使用的是 Hyperledger Fabric 1.1.x 版本，那么 Golang 版本在 1.9.x 以上
 
-```go
+```js
  $ go version 
  $ wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
 ```
@@ -83,13 +83,13 @@ $ sudo usermod -aG docker kevin
 
 使用 tar 命令将下载后的压缩包文件解压到指定的 /usr/local/ 路径下
 
-```go
+```js
 $ sudo tar -zxvf go1.10.3.linux-amd64.tar.gz -C /usr/local/
 ```
 
 设置 GOPATH & GOROOT 环境变量, 通过 `go env` 查看 GOPATH 路径
 
-```go
+```js
 $ sudo vim /etc/profile
 ```
 
@@ -97,7 +97,7 @@ $ sudo vim /etc/profile
 
 在 profile 文件最后添加如下内容:
 
-```go
+```js
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 export PATH=$GOROOT/bin:$PATH
@@ -105,13 +105,13 @@ export PATH=$GOROOT/bin:$PATH
 
 使用 source 命令，使刚刚添加的配置信息生效：
 
-```go
+```js
 $ source /etc/profile
 ```
 
 通过 go version 命令验证是否成功：
 
-```go
+```js
 $ go version
 ```
 
@@ -121,7 +121,7 @@ $ go version
 
 **安装 nvm**
 
-```go
+```js
 $ sudo apt update
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.10/install.sh | bash
 
@@ -131,7 +131,7 @@ $ [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 **安装 Node**
 
-```go
+```js
 $ nvm install v8.11.1
 ```
 
@@ -143,7 +143,7 @@ $ nvm install v8.11.1
 
 *   检查 Node 版本
 
-    ```go
+    ```js
     $ node -v
     ```
 
@@ -151,7 +151,7 @@ $ nvm install v8.11.1
 
 *   检查 npm 版本
 
-    ```go
+    ```js
     $ npm -v
     ```
 
@@ -161,14 +161,14 @@ $ nvm install v8.11.1
 
 使用 `git` 命令从 GitHub 仓库中克隆`hf-artifacts`目录到当前登录用户的 `$HOME` 路径
 
-```go
+```js
 $ cd ~
 $ git clone https://github.com/kevin-hf/hf-artifacts.git
 ```
 
 修改 `hf-artifacts` 文件夹的所属关系为当前用户
 
-```go
+```js
 $ sudo chown -R kevin:kevin ./hf-artifacts
 ```
 
@@ -176,13 +176,13 @@ $ sudo chown -R kevin:kevin ./hf-artifacts
 
 重命名`hf-artifacts`为`kevin-marbles`
 
-```go
+```js
 $ mv hf-artifacts kevin-marbles
 ```
 
 进入 `kevin-marbles/artifacts` 目录
 
-```go
+```js
 $ cd kevin-marbles/artifacts/
 ```
 
@@ -190,7 +190,7 @@ $ cd kevin-marbles/artifacts/
 
 #### 下载 Docker images
 
-```go
+```js
 $ chmod 777 ./pull_images.sh
 $ ./pull_images.sh 
 ```
@@ -207,19 +207,19 @@ $ ./pull_images.sh
 
 首先，我们需要进入项目的 `artifacts` 目录下
 
-```go
+```js
 $ cd $HOME/kevin-marbles/artifacts
 ```
 
 ##### 创建 base.yaml 文件并编辑
 
-```go
+```js
 $ vim base.yaml
 ```
 
 `base.yaml` 文件完整内容如下：
 
-```go
+```js
 version: '2'
 services:
   peer-base:
@@ -246,13 +246,13 @@ services:
 
 ##### 创建 docker-compose.yaml 文件并编辑
 
-```go
+```js
 $ vim docker-compose.yaml 
 ```
 
 `docker-compose.yaml` 文件完整内容如下：
 
-```go
+```js
 version: '2'
 
 networks:
@@ -377,14 +377,14 @@ services:
 
 *   启动网络
 
-    ```go
+    ```js
     $ cd $HOME/kevin-marbles/artifacts
     $ docker-compose up -d
     ```
 
 *   查看 docker 的活动容器
 
-    ```go
+    ```js
     $ docker ps
     ```
 
@@ -392,7 +392,7 @@ services:
 
 *   关闭网络
 
-    ```go
+    ```js
     $ docker-compose down
     ```
 

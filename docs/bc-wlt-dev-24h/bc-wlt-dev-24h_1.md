@@ -80,7 +80,7 @@ BIP44 是在 BIP32 和 BIP43 的基础上增加多币种，提出的层次结构
 
 在 BIP32 路径中定义以下 5 个级别：
 
-```go
+```js
 m/purpse'/coin_type'/account'/change/address_index 
 ```
 
@@ -109,7 +109,7 @@ Base64 就是一种基于 64 个可打印字符来表示二进制数据的方法
 
 Base64 字符集：
 
-```go
+```js
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ 
 ```
 
@@ -122,7 +122,7 @@ Base58 是一种基于文本的二进制编码格式，是用于 Bitcoin 中使�
 
 Base58 字符集：
 
-```go
+```js
 ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz123456789 
 ```
 

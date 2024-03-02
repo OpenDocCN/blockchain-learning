@@ -21,7 +21,7 @@
 
 首先我们需要创建一个交易，API 文档说明如下：
 
-```go
+```js
 API.createTxProposal(opts, opts.outputs, opts.outputs[].toAddress, opts.outputs[].amount, opts.outputs[].message, opts.message, opts.fee, opts.feePerKb, opts.changeAddress, opts.payProUrl, opts.excludeUnconfirmedUtxos, opts.customData, opts.inputs, opts.outputs, opts.utxosToExclude)
 Create a transaction proposal
 
@@ -89,7 +89,7 @@ Returns: Callback, cb - Return error or the transaction proposal
 
 我们先传递必填参数实现创建交易，代码如下：
 
-```go
+```js
 let client = require("../models/walletClient").getWalletClient()
 var path = require('path');
 var fs = require('fs');
@@ -143,7 +143,7 @@ client.createTxProposal(opts, function (err, txp) {
 
 前面已经说到了发送交易需要四个过程，createTxProposal --> publishTxProposal --> signTxProposal --> broadcastTxProposal。重点是在第一步创建交易 createTxProposal，这里指定本次交易的详细数据，后面的三部只需执行即可。
 
-```go
+```js
 let client = require("../models/walletClient").getWalletClient()
 var path = require('path');
 var fs = require('fs');
@@ -240,7 +240,7 @@ client.createTxProposal(opts, function (err, txp) {
 
 现在我们对刚才进行的转账看下是否能成功查询。需要使用 getTxHistory()方法，注意，一定要加上参数 includeExtendedInfo 设置为 true，会显示额外的交易详情，如：输入、输出等。
 
-```go
+```js
 let walletname = "wallet1"
 
 let filePath = path.join(config.walletFilePath, walletname + ".dat")
@@ -322,7 +322,7 @@ UTXO 是比特币交易的基本单位，每笔交易都会产生 UTXO，一个 
 
 controllers 文件夹下新建 transaction.js 文件，实现比特币转账交易和查询交易记录功能。
 
-```go
+```js
 let { success, fail } = require("../utils/myUtils")
 let client = require("../models/walletClient").getWalletClient()
 var path = require('path');
@@ -410,7 +410,7 @@ module.exports = {
 
 编辑 controllers 文件夹下的 web.js 文件，后端实现返回比特币转账交易和查询交易记录页面。
 
-```go
+```js
 ......
 
 getTransactionHtml: (req, res) => 　{
@@ -426,7 +426,7 @@ getTransactionRecordHtml: (req, res) => 　{
 
 将比特币转账交易和查询交易记录的接口绑定到路由。
 
-```go
+```js
 ......
 
 //转账交易
@@ -442,7 +442,7 @@ router.get("/transactionrecord.html", webController.getTransactionRecordHtml)
 
 新建 transaction.js 文件，处理比特币转账交易的网络请求与界面渲染。
 
-```go
+```js
 //账号金额
 function updateWalletBalance(wallet) {
     $("#balance").text("加载中...")
@@ -527,7 +527,7 @@ $(document).ready(function () {
 
 新建 transaction.html 文件，前端显示比特币转账交易的页面。
 
-```go
+```js
 <html>
 
 <head>
@@ -578,7 +578,7 @@ $(document).ready(function () {
 
 新建 transactionRecord.js 文件，处理查询交易记录的网络请求与界面渲染。
 
-```go
+```js
 function formatDateTime(inputTime) {  
     var date = new Date(inputTime);
     var y = date.getFullYear();  
@@ -662,7 +662,7 @@ $(document).ready(function () {
 
 新建 transactionRecord.html 文件，前端显示查询交易记录的页面。
 
-```go
+```js
 <html>
 
 <head>

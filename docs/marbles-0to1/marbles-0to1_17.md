@@ -6,14 +6,14 @@
 
 ### 创建 app.js
 
-```go
+```js
 $ cd $HOME/kevin-marbles
 $ vim app.js 
 ```
 
 文件完整内容如下
 
-```go
+```js
 'use strict';
 /* global process */
 /* global __dirname */
@@ -228,13 +228,13 @@ function setupWebSocket() {
 
 ### 创建 gulpfile .js
 
-```go
+```js
 $ vim gulpfile.js 
 ```
 
 文件内容如下
 
-```go
+```js
 var path = require('path');
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -286,21 +286,21 @@ gulp.task('env_local', function () {
 
 进入 scripts 目录，启动网络
 
-```go
+```js
 $ cd ~/kevin-marbles/scripts
 $ ./start.sh 
 ```
 
 安装、实例化链码(utils/fc_wrangler/index.js 有问题，须参考源代码)
 
-```go
+```js
 $ node install_chaincode.js
 $ node instantiate_chaincode.js 
 ```
 
 使用以下命令启动应用：
 
-```go
+```js
 $ cd $HOME/kevin-marbles
 $ gulp marbles_local 
 ```

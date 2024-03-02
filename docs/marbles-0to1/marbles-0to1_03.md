@@ -6,13 +6,13 @@
 
 返回项目根目录下：
 
-```go
+```js
 $ cd $HOME/kevin-marbles 
 ```
 
 新建存储链码源文件的所在目录：
 
-```go
+```js
 $ mkdir -p chaincode/src/marbles
 $ cd chaincode/src/marbles 
 ```
@@ -21,13 +21,13 @@ $ cd chaincode/src/marbles
 
 链码主文件主要声明与 Marble 相关的结构体，实现链码的接口及根据不同的请求调用不同的函数。
 
-```go
+```js
 $ vim marbles.go 
 ```
 
 文件完整内容如下：
 
-```go
+```js
 /*
 Licensed to the Apache Software Foundation (ASF) under one
 or more contributor license agreements.  See the NOTICE file
@@ -186,13 +186,13 @@ func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface) pb.Response {
 
 lib.go 文件中主要声明并实现了根据指定的 ID 对 Marble 与 Owner 状态查询的公共函数。
 
-```go
+```js
 $ vim lib.go 
 ```
 
 文件完整内容如下
 
-```go
+```js
 /*
 Licensed to the Apache Software Foundation (ASF) under one
 or more contributor license agreements.  See the NOTICE file
@@ -270,13 +270,13 @@ func sanitize_arguments(strs []string) error{
 
 #### 创建 read_ledger.go 文件并编辑（查询状态）
 
-```go
+```js
 $ vim read_ledger.go 
 ```
 
 文件完整内容如下
 
-```go
+```js
 /*
 Licensed to the Apache Software Foundation (ASF) under one
 or more contributor license agreements.  See the NOTICE file
@@ -545,13 +545,13 @@ func getMarblesByRange(stub shim.ChaincodeStubInterface, args []string) pb.Respo
 
 #### 创建 write_ledger.go 文件并编辑（事务操作）
 
-```go
+```js
 $ vim write_ledger.go 
 ```
 
 文件完整内容如下
 
-```go
+```js
 /*
 Licensed to the Apache Software Foundation (ASF) under one
 or more contributor license agreements.  See the NOTICE file

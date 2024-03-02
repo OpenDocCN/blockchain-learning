@@ -6,7 +6,7 @@
 
 在 utils 目录下创建 fc_wrangler/parts 子目录
 
-```go
+```js
 $ cd $HOME/kevin-marbles/utils
 $ mkdir -p fc_wrangler/parts && cd fc_wrangler/parts 
 ```
@@ -19,13 +19,13 @@ $ mkdir -p fc_wrangler/parts && cd fc_wrangler/parts
 
 ### 创建 common.js
 
-```go
+```js
 $ vim common.js 
 ```
 
 common.js 文件内容如下
 
-```go
+```js
 //-------------------------------------------------------------------
 // Common/Helper Library for Fabric Client Wrangler
 //-------------------------------------------------------------------
@@ -144,13 +144,13 @@ module.exports = function (logger) {
 
 创建 enrollment.js 文件并编辑
 
-```go
+```js
 $ vim enrollment.js 
 ```
 
 enrollment.js 文件内容如下
 
-```go
+```js
 //-------------------------------------------------------------------
 // Enrollment HFC Library
 //-------------------------------------------------------------------
@@ -329,13 +329,13 @@ module.exports = function (logger) {
 
 创建 deploy_cc.js 文件并编辑，主要用于安装、实例化、升级链码
 
-```go
+```js
 $ vim deploy_cc.js 
 ```
 
 deploy_cc.js 文件内容如下
 
-```go
+```js
 //-------------------------------------------------------------------
 // Install + Instantiate + Upgrade Chaincode
 //-------------------------------------------------------------------
@@ -514,14 +514,14 @@ module.exports = function (logger) {
 
 在 utils/fc_wrangler 目录下创建 index.js 文件并编辑，通过此文件完成对链码的调用，实现对链码的安装及实例化，后面也使用此文件实现对分类账本的数据状态进行操作的入口。
 
-```go
+```js
 $ cd $HOME/kevin-marbles/utils/fc_wrangler/
 $ vim index.js 
 ```
 
 index.js 文件完整内容如下
 
-```go
+```js
 //-------------------------------------------------------------------
 // Fabric Client Wrangler - Wrapper library for the Hyperledger Fabric Client SDK
 //-------------------------------------------------------------------

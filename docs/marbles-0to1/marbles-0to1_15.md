@@ -8,14 +8,14 @@
 
 在项目的 utils 目录下创建 websocket_server_side.js 文件并编辑
 
-```go
+```js
 $ cd $HOME/kevin-marbles/utils
 $ vim websocket_server_side.js 
 ```
 
 websocket_server_side.js 文件完整内容如下
 
-```go
+```js
 // ==================================
 // Websocket Server Side Code
 // ==================================

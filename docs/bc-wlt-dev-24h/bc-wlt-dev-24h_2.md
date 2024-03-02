@@ -92,13 +92,13 @@ BIP39 是助记词标准的实现，助记词是一个随机数的字序列，�
 
 扩展私钥的前缀是 xprv，如：
 
-```go
+```js
 tprv8iGPAfgu51nkCZZtua8jFgzVoCQLqHZrLCQonxTo7qdtzutL8ZFZt1yAtpcUF8sHdNyiVhece3SSRsBvtUCKpGkRvxXgV2TMdcDbKQzstta 
 ```
 
 扩展公钥的前缀是 tpub，如：
 
-```go
+```js
 tpubDExRK5j9DPUR62bgoDoKf6ecNDvGzckkuW1b5UW6Y7SHqQ96kx5A4Wb34w6bkHUStdq5w7ZHPQHkipwRdSQMbGnqTAQj1sEBaJmL9wXvBSu 
 ```
 
@@ -112,7 +112,7 @@ tpubDExRK5j9DPUR62bgoDoKf6ecNDvGzckkuW1b5UW6Y7SHqQ96kx5A4Wb34w6bkHUStdq5w7ZHPQHk
 
 ### 代码
 
-```go
+```js
 var bitcoin = require('bitcoinjs-lib');
 var bip39 = require("bip39")
 var bip32 = require("bip32")

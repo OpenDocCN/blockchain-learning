@@ -65,7 +65,7 @@ SegWit 的解决方案由两部分组成的：
 
 ### 代码
 
-```go
+```js
 var bitcoin = require('bitcoinjs-lib');
 var bip39 = require("bip39")
 var bip32 = require("bip32")
@@ -122,7 +122,7 @@ function getSegWitAddress(keyPair,myNetwork) {
 
 这里只解 getSegWitAddress 方法的实现，其它代码解析请查看上一章“从生成助记词到扩展子地址”的内容。
 
-```go
+```js
 const { address } = bitcoin.payments.p2sh({
         redeem: bitcoin.payments.p2wpkh({ pubkey: keyPair.publicKey, network: myNetwork}),
         network: myNetwork

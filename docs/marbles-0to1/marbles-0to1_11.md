@@ -11,14 +11,14 @@
 *   **创建通道**
 *   **将指定的 peer 节点加入到通道中**
 
-```go
+```js
 $ cd ~/kevin-marbles/scripts
 $ vim start.sh 
 ```
 
 start.sh 脚本完整内容如下：
 
-```go
+```js
 #!/bin/bash
 set -ev
 export MSYS_NO_PATHCONV=1
@@ -44,7 +44,7 @@ docker exec -e "CORE_PEER_LOCALMSPID=org1.kevin.chaindesk.cn" -e "CORE_PEER_MSPC
 
 为 start.sh 脚本添加可执行权限
 
-```go
+```js
 $ chmod 777 ./start.sh 
 ```
 
@@ -52,7 +52,7 @@ start.sh 脚本具有了可执行权限之后，我们就可以执行 start.sh �
 
 ### 启动网络
 
-```go
+```js
 $ cd ~/kevin-marbles/scripts
 $ ./start.sh 
 ```
@@ -69,7 +69,7 @@ $ ./start.sh
 
 使用以下命令安装 Marble 链码文件
 
-```go
+```js
 $ cd ~/kevin-marbles/scripts
 $ node install_chaincode.js 
 ```
@@ -82,7 +82,7 @@ $ node install_chaincode.js
 
 使用如下命令实例化链码
 
-```go
+```js
 $ node instantiate_chaincode.js 
 ```
 
@@ -92,14 +92,14 @@ $ node instantiate_chaincode.js
 
 ### 关闭并清理网络
 
-```go
+```js
 $ cd ~/kevin-marbles/scripts
 $ vim stop.sh 
 ```
 
 stop.sh 脚本完整内容如下
 
-```go
+```js
 #!/bin/bash
 
 set -ev
@@ -124,13 +124,13 @@ docker rmi -f $(docker images | grep dev | awk '{print $3}')
 
 为 stop.sh 脚本添加可执行权限
 
-```go
+```js
 $ chmod 777 ./stop.sh 
 ```
 
 执行
 
-```go
+```js
 $ ./stop.sh 
 ```
 

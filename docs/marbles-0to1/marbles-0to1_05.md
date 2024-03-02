@@ -4,13 +4,13 @@
 
 进入 marbles 项目根目录:
 
-```go
+```js
 $ cd $HOME/kevin-marbles 
 ```
 
 创建 package.json 文件并编辑
 
-```go
+```js
 $ vim package.json 
 ```
 
@@ -18,7 +18,7 @@ $ vim package.json
 
 package.json 文件完整内容如下：
 
-```go
+```js
 {
     "name": "marbles",
     "version": "4.0.0",
@@ -53,7 +53,7 @@ package.json 文件完整内容如下：
 
 我们需要一些弹珠依赖项来运行安装/实例化脚本。通过导航回弹珠目录的根目录并输入这些命令来安装大理石 npm 依赖项。如果您已经运行了这些命令，则可以再次运行它们
 
-```go
+```js
 $ cd ~/kevin-marbles
 $ npm install 
 ```
@@ -64,7 +64,7 @@ $ npm install
 
 创建 config 目录并进入该目录
 
-```go
+```js
 $ cd $HOME/kevin-marbles
 $ mkdir config && cd config 
 ```
@@ -73,7 +73,7 @@ $ mkdir config && cd config
 
 在 config 目录中创建一个名为 connection_profile_local.json 的文件并编辑，由该文件中的信息指定区块链网络中各节点的相关信息
 
-```go
+```js
 $ vim connection_profile_local.json 
 ```
 
@@ -89,7 +89,7 @@ $ vim connection_profile_local.json
 
 connection_profile_local.json 文件完整内容如下：
 
-```go
+```js
 {
     "name": "Docker Compose Network",
     "x-networkId": "not-important",
@@ -168,7 +168,7 @@ connection_profile_local.json 文件完整内容如下：
 
 创建 marbles_local.json 文件并编辑
 
-```go
+```js
 $ vim marbles_local.json 
 ```
 
@@ -176,7 +176,7 @@ $ vim marbles_local.json
 
 文件完整内容如下：
 
-```go
+```js
 {
     "cred_filename": "connection_profile_local.json",
     "use_events": true,

@@ -18,7 +18,7 @@
 
 在 bitcore-wallet-client 库中获取子账号地址提供的 API 是 getMainAddresses()方法，具体参数可以查看文档详情，这里我们可以不传参数，示例如下
 
-```go
+```js
 let walletname = "wallet1"
 
 let filePath = path.join(config.walletFilePath, walletname + ".dat")
@@ -40,7 +40,7 @@ client.getMainAddresses({}, function (err, addresses) {
 
 在 bitcore-wallet-client 库中获取钱包余额提供的 API 是 getBalance()方法，具体参数可以查看文档详情，这里我们可以不传参数，示例如下
 
-```go
+```js
 let walletname = "wallet1"
 
 let filePath = path.join(config.walletFilePath, walletname + ".dat")
@@ -110,7 +110,7 @@ client.getBalance({}, (err, balanceData) => {
 
 到此为止我们的钱包只有一个子账号地址，要获取更多的子账号地址，就是获取路径“m/0/1”、“m/0/2”......"m/0/2³¹"的子地址，可以通过 API 调用 createAddress()实现，它会根据路径按照 0～2³¹ 的顺序创建，它的用法很简单，在创建钱包的时候也都调用过。下面再看下它的完整实现。
 
-```go
+```js
 let walletname = "wallet1"
 
 let filePath = path.join(config.walletFilePath, walletname + ".dat")
@@ -131,7 +131,7 @@ client.createAddress({}, function (err, addr) {
 
 ### 验证一：使用代码
 
-```go
+```js
 let walletname = "wallet1"
 
 let filePath = path.join(config.walletFilePath, walletname + ".dat")
@@ -146,7 +146,7 @@ client.getBalance({}, (err, balanceData) => {
 
 输出如下：
 
-```go
+```js
 null { totalAmount: 12121737,
   lockedAmount: 0,
   totalConfirmedAmount: 12121737,
@@ -200,7 +200,7 @@ null [ { version: '1.0.0',
 
 现在我们来导出“wallet1”钱包中“m/0/1”路径的私钥。需要通过 credentials 认证对象调用 getDerivedXPrivKey()方法获取到 derivedXPrivKey，derivedXPrivKey 再通过路径获取到指定账号的 keyPair，那么 keyPair 里面就有私钥了。
 
-```go
+```js
 let walletname = "wallet1"
 let childpath = "m/0/1"
 
@@ -223,7 +223,7 @@ console.log(keyPair.toWIF())
 
 编辑 controllers 文件夹下的 wallet.js 文件，实现获取钱包子账号地址、获取钱包余额获、新建钱包子账号地址、导出子账号私钥功能。
 
-```go
+```js
 ......
 
 module.exports = {
@@ -296,7 +296,7 @@ module.exports = {
 
 编辑 controllers 文件夹下的 web.js 文件，后端实现返回钱包账号详细页面。
 
-```go
+```js
 ......
 
 getWalletInfoHtml: (req, res) => {
@@ -308,7 +308,7 @@ getWalletInfoHtml: (req, res) => {
 
 将获取钱包子账号地址、获取钱包余额获、新建钱包子账号地址、导出子账号私钥的接口绑定到路由。
 
-```go
+```js
 ......
 
 //钱包
@@ -326,7 +326,7 @@ router.get("/walletinfo.html", webController.getWalletInfoHtml)
 
 新建 walletInfo.js 文件，处理获取钱包子账号地址、获取钱包余额获、新建钱包子账号地址、导出子账号私钥等的网络请求与界面渲染。
 
-```go
+```js
 //获取子地址
 function createSubAddress() {
     //地址
@@ -414,7 +414,7 @@ $(document).ready(function () {
 
 新建 walletInfo.html 文件，前端显示钱包账号详情的页面。
 
-```go
+```js
 <html>
 
 <head>

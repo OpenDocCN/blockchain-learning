@@ -4,7 +4,7 @@
 
 我们应该创建一个应用中关于链码操作的公共 JS 库，该库中每个函数都使用 FCW 库与 Peers/Orderer 节点进行通信。
 
-```go
+```js
 $ cd $HOME/kevin-marbles/utils 
 ```
 
@@ -12,13 +12,13 @@ $ cd $HOME/kevin-marbles/utils
 
 通过调用 utils/fc_wrangler/index.js 文件实现对事务的相关操作
 
-```go
+```js
 $ vim marbles_cc_lib.js 
 ```
 
 marbles_cc_lib.js 文件完整内容如下
 
-```go
+```js
 //-------------------------------------------------------------------
 // Marbles Chaincode Library
 // - this contains the most interesting code pieces of marbles.
@@ -383,14 +383,14 @@ module.exports = function (enrollObj, g_options, fcw, logger) {
 
 返回到 utils 目录下
 
-```go
+```js
 $ cd $HOME/kevin-marbles/utils
 $ vim startup_lib.js 
 ```
 
 startup_lib.js 文件完整内容如下
 
-```go
+```js
 // ============================================================================================================================
 // startup_lib.js
 // This file has the functions we call during start up

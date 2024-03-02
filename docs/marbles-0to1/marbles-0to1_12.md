@@ -13,19 +13,19 @@
 
 进入 utils/fc_wrangler/parts 目录
 
-```go
+```js
 $ cd $HOME/kevin-marbles/utils/fc_wrangler/parts 
 ```
 
 #### 创建 high_availability.js
 
-```go
+```js
 $ vim high_availability.js 
 ```
 
 high_availability.js 文件内容如下
 
-```go
+```js
 // ------------------------------------------------------------------------
 // HA Functions (HA = High Availability) aka try another peer/CAs
 // ------------------------------------------------------------------------
@@ -148,13 +148,13 @@ module.exports = function (logger) {
 
 #### 创建 invoke_cc.js
 
-```go
+```js
 $ vim invoke_cc.js 
 ```
 
 invoke_cc.js 文件内容如下
 
-```go
+```js
 //-------------------------------------------------------------------
 // Invoke Chaincode
 //-------------------------------------------------------------------
@@ -294,13 +294,13 @@ module.exports = function (g_options, logger) {
 
 #### 创建 query_cc.js
 
-```go
+```js
 $ vim query_cc.js 
 ```
 
 query_cc.js 文件内容如下
 
-```go
+```js
 //-------------------------------------------------------------------
 // Query Chaincode
 //-------------------------------------------------------------------
@@ -418,13 +418,13 @@ module.exports = function (logger) {
 
 #### 创建 query_peer.js
 
-```go
+```js
 $ vim query_peer.js 
 ```
 
 query_peer.js 文件内容如下
 
-```go
+```js
 //-------------------------------------------------------------------
 // Query Peer - read the ledger / channel
 //-------------------------------------------------------------------
@@ -751,13 +751,13 @@ module.exports = function (logger) {
 
 打开链码调用的入口： utils/fc_wrangler/index.js 文件并编辑
 
-```go
+```js
 $ vim $HOME/kevin-marbles/utils/fc_wrangler/index.js 
 ```
 
 文件中添加如下内容
 
-```go
+```js
 //-------------------------------------------------------------------
 // Fabric Client Wrangler - Wrapper library for the Hyperledger Fabric Client SDK
 //-------------------------------------------------------------------

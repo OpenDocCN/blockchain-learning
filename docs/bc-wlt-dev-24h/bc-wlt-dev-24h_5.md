@@ -14,7 +14,7 @@
 
 在上一章的内容中已经将创建钱包客户端对象的方法封装到了 Models/walletClient.js 文件中的 getWalletClient()方法中，如下：
 
-```go
+```js
 getWalletClient: () => {
         var Client = require('bitcore-wallet-client');
 
@@ -30,7 +30,7 @@ getWalletClient: () => {
 
 现在我们在业务类 wallet 中调用该方法。
 
-```go
+```js
 var client = require("../models/walletClient").getWalletClient() 
 ```
 
@@ -42,7 +42,7 @@ var client = require("../models/walletClient").getWalletClient()
 
 创建钱包的 API 文档如下：
 
-```go
+```js
 API.createWallet(walletName, copayerName, m, n, opts, opts.network, opts.walletPrivKey, opts.id, opts.withMnemonics, cb)
 Create a wallet.
 
@@ -99,7 +99,7 @@ Returns: undefined
 
 根据上面的分析我们进行如下的调用。
 
-```go
+```js
 var client = require("../models/walletClient").getWalletClient()
 
 client.createWallet("MyWallet", "lixu", 1, 1, {
@@ -121,7 +121,7 @@ client.createWallet("MyWallet", "lixu", 1, 1, {
 
 我们需要在创建钱包之间调用 seedFromRandomWithMnemonic()方法通过随机助记词生成种子，目的是为了能够导出该钱包的助记词备份钱包。下面 API 文档就不作解释了，大家可以在[GitHub](https://github.com/bitpay/bitcore-wallet-client)查看，它的用法如下
 
-```go
+```js
 client.seedFromRandomWithMnemonic({
     passphrase: "12345678",
     network: "testnet",
@@ -144,7 +144,7 @@ client.seedFromRandomWithMnemonic({
 
 本项目为了让大家快速开发比特币钱包项目，对于非重点内容没有花时间去讲解。那么这里项目中导出的钱包为了便于讲解是放在的服务器中，这是非常不安全的做法，对于有经验的开发者自然是了解如何处理这类敏感数据。另外，服务端是对同一个用户”lixu“即代码中“copayerName”字段创建的钱包，在实际开发中需要实现用户模块建立用户体系，这里就简写了。建议将此数据放到客户端保存，并且需要加密。
 
-```go
+```js
 ......
 
 var path = require('path');
@@ -168,7 +168,7 @@ client.createWallet("MyWallet", "lixu", 1, 1, {
 
 新创建的钱包没有自动生成地址，为了打开该钱包的时候有一个地址，所以我们可以在创建成功后调用新建地址的方法让他拥有第一个账号地址。当然，它的路径肯定就是“M/0/0”了。接下来我们会获取钱包的子账号地址进行查看。
 
-```go
+```js
 ......
 
 console.log(ret,ret)
@@ -202,7 +202,7 @@ client.createAddress({}, function (err, addr) {
 
 将常量放在了 config 配置文件中，在上一章中已经作了介绍。
 
-```go
+```js
  var client = require("../models/walletClient").getWalletClient()
 var path = require('path');
 var fs = require('fs');
@@ -251,7 +251,7 @@ module.exports = {
 
 将创建钱包的接口绑定到路由。
 
-```go
+```js
 let router = require('express').Router();
 
 let walletController = require("../controllers/wallet")
@@ -270,7 +270,7 @@ module.exports = router
 
 在文档加载完成后设置创建钱包表单的验证与网络请求。
 
-```go
+```js
 $(document).ready(function () {
 
     //创建钱包
@@ -317,7 +317,7 @@ $(document).ready(function () {
 
 前端：钱包列表的初始页面。
 
-```go
+```js
 <html>
 
 <head>
