@@ -1,4 +1,4 @@
-# 四、.2 web 层实现
+# 4.2 web 层实现
 
 ## 从零到壹实现 Marbles 资产管理系统 （Fabric-SDK-Node）之－用户交互开发
 

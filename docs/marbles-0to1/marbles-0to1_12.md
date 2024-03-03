@@ -1,4 +1,4 @@
-# 三、.4 sdk-node 之实现事务与查询
+# 3.4 sdk-node 之实现事务与查询
 
 ## 从零到壹实现 Marbles 资产管理系统 （Fabric-SDK-Node）之－实现交易与查询
 

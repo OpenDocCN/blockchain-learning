@@ -1,4 +1,4 @@
-# 六、.4 Fabric CA 的具体使用：应用 Fabric CA 的客户端命令
+# 6.4 Fabric CA 的具体使用：应用 Fabric CA 的客户端命令
 
 ## 目标
 

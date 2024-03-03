@@ -1,4 +1,4 @@
-# 二、.2 设置环境-连接概要库
+# 2.2 设置环境-连接概要库
 
 ### 创建目录 utils/connection_profile_lib/parts
 

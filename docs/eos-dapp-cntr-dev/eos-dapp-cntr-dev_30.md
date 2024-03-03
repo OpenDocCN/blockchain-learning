@@ -1,4 +1,4 @@
-# 六、.3 开发 RESTful API 和 webSocket 接口
+# 6.3 开发 RESTful API 和 webSocket 接口
 
 > 本章节主要内容是：
 > 

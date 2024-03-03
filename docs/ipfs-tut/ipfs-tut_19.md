@@ -1,4 +1,4 @@
-# 五、.2 教程 2: 安装并使用 ipfs desktop 应用
+# 5.2 教程 2: 安装并使用 ipfs desktop 应用
 
 ## 安装 ipfs desktop
 

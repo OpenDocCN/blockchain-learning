@@ -1,4 +1,4 @@
-# 三、.1 sdk-node 之链码安装及实例化
+# 3.1 sdk-node 之链码安装及实例化
 
 ## 从零到壹实现 Marbles 资产管理系统 （Fabric-SDK-Node）之－链码安装及实例化
 

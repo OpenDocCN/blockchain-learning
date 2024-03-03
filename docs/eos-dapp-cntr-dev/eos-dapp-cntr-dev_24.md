@@ -1,4 +1,4 @@
-# 五、.1 创建后端项目 diceContract 开发合约与部署脚本
+# 5.1 创建后端项目 diceContract 开发合约与部署脚本
 
 > diceContract 项目用于开发合约，另外也需要开发脚本去部署合约，所以得支持 C++、nodejs 语言的编译器，这里我推荐使用 VSCode。
 > 

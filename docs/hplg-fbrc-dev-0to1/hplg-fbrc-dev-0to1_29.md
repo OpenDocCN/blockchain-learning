@@ -1,4 +1,4 @@
-# 六、.3 如何启动 Fabric CA
+# 6.3 如何启动 Fabric CA
 
 ## 目标
 

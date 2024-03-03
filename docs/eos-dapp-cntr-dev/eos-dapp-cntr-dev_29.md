@@ -1,4 +1,4 @@
-# 六、.2 开发后端项目 webServer 提供前端 API
+# 6.2 开发后端项目 webServer 提供前端 API
 
 > 本章节主要内容是：
 > 

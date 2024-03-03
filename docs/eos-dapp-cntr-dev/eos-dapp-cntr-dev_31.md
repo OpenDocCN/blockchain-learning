@@ -1,4 +1,4 @@
-# 六、.4 配置 DApp 运行环境——Scatter 与 TokenPocket
+# 6.4 配置 DApp 运行环境——Scatter 与 TokenPocket
 
 > 接下来我们需要开发 DApp，它必须基于钱包，可以支持 PC 浏览器、移动端 App，所以，在这之前我们需要对 DApp 的钱包环境进行配置。
 > 

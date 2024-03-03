@@ -1,4 +1,4 @@
-# 十一、.7 Multi-Index 完整用法及示例讲解---数据检索篇
+# 11.7 Multi-Index 完整用法及示例讲解---数据检索篇
 
 在本小节，将会为大家讲解五种数据查询方法：find、require_find、get、lower_bound、upper_bound。
 

@@ -1,4 +1,4 @@
-# 六、.2 认识 Fabric CA
+# 6.2 认识 Fabric CA
 
 ## 目标
 

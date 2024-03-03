@@ -1,4 +1,4 @@
-# 十一、.8 Multi-Index 完整用法及示例讲解---迭代器篇
+# 11.8 Multi-Index 完整用法及示例讲解---迭代器篇
 
 在**eosio::multi_index**类中共计提供了 cbegin、begin、crbegin、rbegin、cend、end、crend、rend 八个迭代方法，共计四对对称方法
 

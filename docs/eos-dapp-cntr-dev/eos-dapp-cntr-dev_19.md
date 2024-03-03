@@ -1,4 +1,4 @@
-# 四、.6 inline action 与 deferred action
+# 4.6 inline action 与 deferred action
 
 > 本章主要内容包含：
 > 

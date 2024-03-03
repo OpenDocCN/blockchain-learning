@@ -1,4 +1,4 @@
-# 二、.5 DICE 游戏项目——前端接口
+# 2.5 DICE 游戏项目——前端接口
 
 > 包含 websocket、HTTP、合约、TP API、Scatter API 多部分接口
 

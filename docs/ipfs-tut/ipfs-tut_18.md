@@ -1,4 +1,4 @@
-# 五、.1 教程 1: 安装和使用 google 浏览器插件 ipfs companion
+# 5.1 教程 1: 安装和使用 google 浏览器插件 ipfs companion
 
 IPFS 伴侣（IPFS Companion）是一个由 IPFS 官方应用社区（IPFS-Shipyard）孵化出来的应用项目。 它是一个浏览器插件，可以帮助用户在本地更好的运行、管理自己的节点，并随时查看 IPFS 节点的资源信息。 ![](img/3a1ec5fe23c925760fe571f5562c4807.jpg)
 

@@ -1,4 +1,4 @@
-# 六、.6 Google 浏览器访问 DICE DApp
+# 6.6 Google 浏览器访问 DICE DApp
 
 > 本节是重点是对整个项目进行测试，验证前面开发完成的合约、后端的正确性。对于完整 DApp 项目源码，可联系官方微信：kongyixueyuan，或者作者微信：lixu1770105，获取 React 全套代码。
 > 

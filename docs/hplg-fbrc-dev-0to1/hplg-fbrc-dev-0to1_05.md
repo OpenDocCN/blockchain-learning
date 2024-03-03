@@ -1,4 +1,4 @@
-# 一、.4 进入 Fabric 世界：测试 Fabric 网络环境
+# 1.4 进入 Fabric 世界：测试 Fabric 网络环境
 
 ## 目标
 

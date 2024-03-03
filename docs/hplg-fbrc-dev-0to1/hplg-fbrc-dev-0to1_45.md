@@ -1,4 +1,4 @@
-# 十一、.1 配置 Fabric－SDK
+# 11.1 配置 Fabric－SDK
 
 ## 目标
 

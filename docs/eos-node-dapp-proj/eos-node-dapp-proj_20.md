@@ -1,4 +1,4 @@
-# 七、.2 基础框架整合（Express\Node\Log\Profile\Socket)
+# 7.2 基础框架整合（Express\Node\Log\Profile\Socket)
 
 # 技术框架整合
 

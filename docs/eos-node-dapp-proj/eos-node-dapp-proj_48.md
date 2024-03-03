@@ -1,4 +1,4 @@
-# 十一、.10 如何根据业务场景选择合适的（Deferred Action、Inline Action）
+# 11.10 如何根据业务场景选择合适的（Deferred Action、Inline Action）
 
 EOS 智能合约中支持两种 Action 进行合约间方法调用。**Inline actions**可理解为同步执行操作；**Deferred actions**为异步执行操作。
 

@@ -1,4 +1,4 @@
-# 十一、.3 使用 EOS.js 发布 EOS 智能合约
+# 11.3 使用 EOS.js 发布 EOS 智能合约
 
 # 使用 EOS.js 发布 EOS 智能合约
 

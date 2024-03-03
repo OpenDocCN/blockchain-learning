@@ -1,4 +1,4 @@
-# 四、.7 eosio.code 权限使合约间交互
+# 4.7 eosio.code 权限使合约间交互
 
 > 上一章我们学习了`deferred action`和`inline action`，这两种方式调用合约 action，然而例子中我们都是调用的合约内部的 action。那么调用外部合约 action 可以吗？会有什么坑呢？这就是本章的内容：`eosio.code`权限，需要正确使用它才能使合约间进行交互。
 > 
